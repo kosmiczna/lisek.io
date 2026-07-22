@@ -28,6 +28,10 @@ body {
 }
 
 .card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
     background: var(--surface);
     border-radius: 16px;
     padding: 1.5rem;
@@ -35,14 +39,21 @@ body {
 }
 
 .card img {
-    width: 96px;
-    height: 96px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
 .card h1 {
-    margin: 0.75rem 0 0.25rem;
+    margin: 0;
 }
 
 .card h2 {

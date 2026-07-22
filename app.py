@@ -11,8 +11,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-
-
+# url shortner
+@app.route("/<link>")
+def link(link):
+    return link
 
 if __name__ == "__main__":
     app.run(debug=True)
