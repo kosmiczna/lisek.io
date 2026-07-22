@@ -1,8 +1,19 @@
+/* colour variables */
+:root {
+    --bg: #111;
+    --surface: #1c1c1c;
+    --surface-hover: #262626;
+    --text: #eee;
+    --text-muted: #aaa;
+    --link: #8ab4f8;
+    --link-hover: #c2d9fd;
+}
+
 body {
     margin: 0;
     padding: 2rem 1rem;
-    background: #111;
-    color: #eee;
+    background: var(--bg);
+    color: var(--text);
     font-family: system-ui, sans-serif;
     display: flex;
     flex-direction: column;
@@ -10,10 +21,14 @@ body {
     text-align: center;
 }
 
-.card {
+.card,
+.links {
     max-width: 380px;
     width: 100%;
-    background: #1c1c1c;
+}
+
+.card {
+    background: var(--surface);
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -33,15 +48,13 @@ body {
 .card h2 {
     margin: 0;
     font-weight: normal;
-    color: #aaa;
+    color: var(--text-muted);
 }
 
 .links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 0.75rem;
-    max-width: 380px;
-    width: 100%;
     margin: 1.5rem 0;
 }
 
@@ -50,13 +63,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background: #1c1c1c;
+    background: var(--surface);
     border-radius: 12px;
     text-decoration: none;
 }
 
 .link:hover {
-    background: #262626;
+    background: var(--surface-hover);
 }
 
 .link img {
@@ -65,11 +78,11 @@ body {
 }
 
 a {
-    color: #8ab4f8;
+    color: var(--link);
 }
 
 a:hover {
-    color: #c2d9fd;
+    color: var(--link-hover);
 }
 
 footer {
