@@ -22,7 +22,7 @@ def link(link):
         if link in entry:
             return redirect(entry[link])
     else:
-        return "not found"
+        return "not found", 404
 
 if __name__ == "__main__":
     app.run(debug=True)
