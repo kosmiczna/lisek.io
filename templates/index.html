@@ -36,12 +36,44 @@
         <a class="link" href="https://pawstar.pl">
             <img src="/static/icons/globe.svg" alt="website">
         </a>
-        <a class="link" href="mailto:contact@pawstar.pl">
+        <a class="link" href="email">
             <img src="/static/icons/mail.svg" alt="email">
         </a>
     </div>
+    <div class="duo">
+        <div class="card col" id="about-card">
+            <h3>about</h3>
+            <p class="bio">fox on the internet <br> i make things... sometimes</p>
+        </div>
+        <div class="card col" id="time-card">
+            <h3>my time</h3>
+            <div id="clock">--:--:--</div>
+            <div class="status"><span class="dot" id="dot"></span><span id="status-text"></span></div>
+        </div>
+    </div>
+    <div class="card col" id="ss-card">
+        <div class="ss-label"><img src="/static/icons/scoresaber.svg" alt=""> scoresaber</div>
+        <div class="ss-head">
+            <img id="ss-avatar" src="https://cdn.scoresaber.com/avatars/76561199033653351.jpg" alt="scoresaber avatar">
+            <div class="ss-id">
+                <h1 id="ss-name">pawstar</h1>
+                <h2 id="ss-country"><img class="ss-flag" id="ss-flag" src="" alt=""><span id="ss-country-text"></span></h2>
+            </div>
+            <div class="ss-pp">
+                <span id="ss-pp"></span>
+            </div>
+        </div>
+        <div class="statrow">
+            <div><small>Global</small><span id="ss-rank"></span></div>
+            <div><small>Country</small><span id="ss-country-rank"></span></div>
+            <div><small>Ranked acc</small><span id="ss-acc"></span></div>
+            <div><small>Plays</small><span id="ss-plays"></span></div>
+        </div>
+    </div>
     <footer>
-        <p>site made and maintained by me - view the source <a href="https://github.com/kosmiczna/lisek.io">here</a> - copyright 2026</p>
+        <p>site made and maintained by me - copyright 2026</p>
+        <p>view the source <a href="https://github.com/kosmiczna/lisek.io">here</a> - {{ git_hash }}</p>
     </footer>
+    <script src="/static/script.js"></script>
 </body>
 </html>
