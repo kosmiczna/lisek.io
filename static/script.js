@@ -48,6 +48,14 @@ fetch("/api/scoresaber")
         document.getElementById("ss-country-text").textContent = data.country + (headset ? " · " + headset : "");
         document.getElementById("ss-rank").textContent = "#" + data.stats.rank.toLocaleString();
         document.getElementById("ss-country-rank").textContent = "#" + data.stats.countryRank.toLocaleString();
+
+        // green up arrow if rank improved recently, red down arrow if it dropped
+        const rankChange = data.stats.rankChange;
+        if (rankChange) {
+            const trend = document.getElementById("ss-rank-change");
+            trend.textContent = (rankChange > 0 ? "▲" : "▼") + Math.abs(rankChange);
+            trend.classList.add(rankChange > 0 ? "up" : "down");
+        }
         document.getElementById("ss-pp").textContent = Math.round(data.stats.totalPP).toLocaleString() + "pp";
         document.getElementById("ss-acc").textContent = data.stats.averageAccuracy.toFixed(1) + "%";
         document.getElementById("ss-plays").textContent = data.stats.totalSubmittedPlays.toLocaleString();
