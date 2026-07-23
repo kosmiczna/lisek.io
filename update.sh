@@ -6,5 +6,5 @@ NEW=$(git rev-parse HEAD)
 
 if [ "$OLD" != "$NEW" ]; then
     ./venv/bin/pip install -q -r requirements.txt
-    systemctl restart lisek.io
+    systemctl restart lisek
 fi
