@@ -12,6 +12,7 @@
     --link: #8ab4f8;
     --link-hover: #c2d9fd;
     --yellow: #ffde1a;
+    --green: #4ade80;
 }
 
 body {
@@ -140,7 +141,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #4ade80;
+    background: var(--green);
 }
 
 .dot.unsure {
@@ -150,6 +151,24 @@ body {
 .dot.asleep {
     background: var(--text-muted);
 }
+
+.contrib {
+    display: grid;
+    gap: 3px;
+}
+
+.contrib i {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.contrib i.empty { background: transparent; }
+.contrib i.l1 { background: rgba(74, 222, 128, 0.3); }
+.contrib i.l2 { background: rgba(74, 222, 128, 0.55); }
+.contrib i.l3 { background: rgba(74, 222, 128, 0.8); }
+.contrib i.l4 { background: var(--green); }
 
 #ss-card {
     border: 1px solid rgba(255, 222, 26, 0.22);
@@ -261,7 +280,7 @@ body {
     font-weight: 700;
 }
 
-.trend.up { color: #4ade80; }
+.trend.up { color: var(--green); }
 .trend.down { color: #f87171; }
 
 .links {
