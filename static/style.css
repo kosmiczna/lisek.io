@@ -29,6 +29,27 @@ body {
     text-align: center;
 }
 
+/* fade each top-level tile in top to bottom, so dynamic tiles further down get a moment to load */
+body > * {
+    animation: fade-in 0.4s ease-out backwards;
+}
+
+body > *:nth-child(1) { animation-delay: 0s; }
+body > *:nth-child(2) { animation-delay: 0.08s; }
+body > *:nth-child(3) { animation-delay: 0.16s; }
+body > *:nth-child(4) { animation-delay: 0.24s; }
+body > *:nth-child(5) { animation-delay: 0.32s; }
+body > *:nth-child(6) { animation-delay: 0.4s; }
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body > * { animation: none; }
+}
+
 .card,
 .links {
     max-width: 380px;

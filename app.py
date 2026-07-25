@@ -18,7 +18,6 @@ app = Flask(__name__)
 with open("links.json", "r") as file:
     links = json.load(file)
 
-# simple in-memory cache so repeat visits don't hammer scoresaber/github's apis
 _cache = {}
 
 def cached(key, ttl, fetch):
