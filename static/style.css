@@ -347,3 +347,11 @@ footer {
     font-size: 0.85rem;
     color: var(--text-muted);
 }
+
+@media (max-width: 600px) {
+    .card,
+    .links,
+    .duo {
+        max-width: none;
+    }
+}
